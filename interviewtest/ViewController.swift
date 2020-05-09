@@ -12,7 +12,7 @@ class ViewController: UIViewController, APIRequestManagerDelegate {
     @IBOutlet var tableView: UITableView!
     let apiRequestManager = APIRequestManager.sharedInstance
     var numberOfSpaceObjects = 0
-    var peopleArray: [Person]?
+    var peopleArray: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,19 @@ class ViewController: UIViewController, APIRequestManagerDelegate {
     func managerDidDecodeSpaceResponseFromAPI() {
         if let spaceResponse = apiRequestManager.spaceResponse {
             self.numberOfSpaceObjects = spaceResponse.number
+        }
+    }
+    
+    func managerDidReceivePersonObjectsFromAPI() {
+        if let peopleArray = apiRequestManager.peopleArray {
+            self.peopleArray = peopleArray
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
+    
 }
-
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +44,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpaceCraftTableViewCell", for: indexPath) as! SpaceCraftTableViewCell
-        cell.personNameLabel?.text = "testPerson"
+        let index = indexPath.row
+        let person = self.peopleArray[index]
+        cell.spaceCraftNameLabel?.text = person.craft
+        cell.personNameLabel?.text = person.name
         return cell
     }
     

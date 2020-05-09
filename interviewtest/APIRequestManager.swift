@@ -31,6 +31,7 @@ class APIRequestManager {
                     self.delegate?.managerDidDecodeSpaceResponseFromAPI()
                     if let peopleArray = spaceResponse.people {
                         self.peopleArray = peopleArray
+                        self.delegate?.managerDidReceivePersonObjectsFromAPI()
                     }
                 }
             }
@@ -52,5 +53,6 @@ class APIRequestManager {
 protocol APIRequestManagerDelegate {
     
     func managerDidDecodeSpaceResponseFromAPI() -> Void
-    
+    func managerDidReceivePersonObjectsFromAPI() -> Void
+
 }
