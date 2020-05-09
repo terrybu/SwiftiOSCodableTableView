@@ -16,18 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //http://open-notify.org/Open-Notify-API/People-In-Space/
-        //list of name, spacecraft
-        let session = URLSession.shared
-        let url = URL(string: "http://api.open-notify.org/astros.json")!
-        let task = session.dataTask(with: url, completionHandler: { data, response, error in
-            // Do something...
-            if let data = data {
-               
-            }
-        })
-        task.resume()
-        
+        let apiRequestManager = APIRequestManager()
         //TODO: Use Codable for parsing json apple's own library
     }
 }
