@@ -8,21 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, APIRequestManagerDelegate {
     @IBOutlet var tableView: UITableView!
+    let apiRequestManager = APIRequestManager.sharedInstance
+    var numberOfSpaceObjects = 0
+    var peopleArray: [Person]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let apiRequestManager = APIRequestManager()
-        //TODO: Use Codable for parsing json apple's own library
+        self.apiRequestManager.delegate = self
+    }
+    
+    //MARK: - Custom Delegate Methods
+    func managerDidDecodeSpaceResponseFromAPI() {
+        if let spaceResponse = apiRequestManager.spaceResponse {
+            self.numberOfSpaceObjects = spaceResponse.number
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return numberOfSpaceObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
