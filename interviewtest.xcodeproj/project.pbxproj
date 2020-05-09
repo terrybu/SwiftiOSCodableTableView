@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AEE7522467024B00EAFB8B /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AEE7512467024B00EAFB8B /* APIRequestManager.swift */; };
 		63B96A052462267100A5CA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96A042462267100A5CA69 /* AppDelegate.swift */; };
 		63B96A072462267100A5CA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96A062462267100A5CA69 /* SceneDelegate.swift */; };
 		63B96A092462267100A5CA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96A082462267100A5CA69 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63AEE7512467024B00EAFB8B /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		63B96A012462267100A5CA69 /* interviewtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interviewtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B96A042462267100A5CA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B96A062462267100A5CA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				63B96A042462267100A5CA69 /* AppDelegate.swift */,
 				63B96A062462267100A5CA69 /* SceneDelegate.swift */,
 				63B96A082462267100A5CA69 /* ViewController.swift */,
+				63AEE7512467024B00EAFB8B /* APIRequestManager.swift */,
 				63B96A1824622CED00A5CA69 /* SpaceObject.swift */,
 				63B96A0A2462267100A5CA69 /* Main.storyboard */,
 				63B96A0D2462267700A5CA69 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				63B96A092462267100A5CA69 /* ViewController.swift in Sources */,
 				63B96A052462267100A5CA69 /* AppDelegate.swift in Sources */,
+				63AEE7522467024B00EAFB8B /* APIRequestManager.swift in Sources */,
 				63B96A072462267100A5CA69 /* SceneDelegate.swift in Sources */,
 				63B96A1924622CED00A5CA69 /* SpaceObject.swift in Sources */,
 			);
