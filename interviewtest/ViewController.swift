@@ -8,33 +8,10 @@
 
 import UIKit
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-            return cell
-    }
-    
-}
-
 class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var spaceObject: SpaceObject?
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let spaceObject = spaceObject {
-//            return spaceObject.number
-//        }
-//        return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        return
-//    }
+    //TODO: - Refactor out to manager objects that can handle network call
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +28,19 @@ class ViewController: UIViewController {
         })
         task.resume()
         
-        //codable parsing json apple's own library
+        //TODO: Use Codable for parsing json apple's own library
     }
 }
 
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            return cell
+    }
+    
+}
