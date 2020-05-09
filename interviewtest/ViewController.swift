@@ -37,8 +37,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SpaceCraftTableViewCell", for: indexPath) as! SpaceCraftTableViewCell
+        cell.personNameLabel?.text = "testPerson"
+        return cell
     }
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63A8B89F2467420200FFF567 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8B89E2467420200FFF567 /* Person.swift */; };
+		63A8B8A224674A1300FFF567 /* SpaceCraftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8B8A124674A1300FFF567 /* SpaceCraftTableViewCell.swift */; };
 		63AEE7522467024B00EAFB8B /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AEE7512467024B00EAFB8B /* APIRequestManager.swift */; };
 		63B96A052462267100A5CA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96A042462267100A5CA69 /* AppDelegate.swift */; };
 		63B96A072462267100A5CA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96A062462267100A5CA69 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		63A8B89E2467420200FFF567 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		63A8B8A124674A1300FFF567 /* SpaceCraftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCraftTableViewCell.swift; sourceTree = "<group>"; };
 		63AEE7512467024B00EAFB8B /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		63B96A012462267100A5CA69 /* interviewtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interviewtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B96A042462267100A5CA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		63A8B8A324674A7200FFF567 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				63A8B8A124674A1300FFF567 /* SpaceCraftTableViewCell.swift */,
+				63B96A0A2462267100A5CA69 /* Main.storyboard */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
 		63B969F82462267100A5CA69 = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +86,8 @@
 				63B96A062462267100A5CA69 /* SceneDelegate.swift */,
 				63B96A082462267100A5CA69 /* ViewController.swift */,
 				63AEE7512467024B00EAFB8B /* APIRequestManager.swift */,
+				63A8B8A324674A7200FFF567 /* User Interface */,
 				63A8B8A02467421200FFF567 /* Model */,
-				63B96A0A2462267100A5CA69 /* Main.storyboard */,
 				63B96A0D2462267700A5CA69 /* Assets.xcassets */,
 				63B96A0F2462267700A5CA69 /* LaunchScreen.storyboard */,
 				63B96A122462267700A5CA69 /* Info.plist */,
@@ -158,6 +169,7 @@
 				63A8B89F2467420200FFF567 /* Person.swift in Sources */,
 				63B96A092462267100A5CA69 /* ViewController.swift in Sources */,
 				63B96A052462267100A5CA69 /* AppDelegate.swift in Sources */,
+				63A8B8A224674A1300FFF567 /* SpaceCraftTableViewCell.swift in Sources */,
 				63AEE7522467024B00EAFB8B /* APIRequestManager.swift in Sources */,
 				63B96A072462267100A5CA69 /* SceneDelegate.swift in Sources */,
 				63B96A1924622CED00A5CA69 /* SpaceCraftResponse.swift in Sources */,
