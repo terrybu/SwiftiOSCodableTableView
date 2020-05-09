@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SpaceObject {
+struct SpaceCraftResponse: Codable {
     var people: [Person]?
     var number: Int
     
@@ -18,12 +18,4 @@ class SpaceObject {
     }
 }
 
-class Person {
-    var name: String
-    var craft: String
-    
-    init(name: String, craft: String) {
-        self.name = name
-        self.craft = craft
-    }
-}
+
