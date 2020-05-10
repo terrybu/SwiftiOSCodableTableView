@@ -85,10 +85,10 @@
 				63B96A062462267100A5CA69 /* SceneDelegate.swift */,
 				63B96A082462267100A5CA69 /* ViewController.swift */,
 				63AEE7512467024B00EAFB8B /* APIRequestManager.swift */,
+				63B96A0A2462267100A5CA69 /* Main.storyboard */,
 				63A8B8A324674A7200FFF567 /* User Interface */,
 				63A8B8A02467421200FFF567 /* Model */,
 				63B96A0D2462267700A5CA69 /* Assets.xcassets */,
-				63B96A0A2462267100A5CA69 /* Main.storyboard */,
 				63B96A0F2462267700A5CA69 /* LaunchScreen.storyboard */,
 				63B96A122462267700A5CA69 /* Info.plist */,
 			);

@@ -21,11 +21,8 @@ class APIRequestManager {
         //list of name, spacecraft
         let session = URLSession.shared
         let task = session.dataTask(with: api_url, completionHandler: { data, response, error in
-            // Do something...
             if let data = data {
-                print(data)
                 if let spaceResponse = self.parseJsonDataIntoDecodedResponse(data: data) {
-                    self.delegate?.requestManagerDidCalculateNumberOfJSONObjectsFromAPI(numberOfObjectsReturnedFromAPI: spaceResponse.number)
                     if let personArray = spaceResponse.people {
                         self.delegate?.requestManagerDidFinishTransformJSONtoPersonArray(personArray: personArray)
                     }
@@ -48,7 +45,6 @@ class APIRequestManager {
 
 protocol APIRequestManagerDelegate {
     
-    func requestManagerDidCalculateNumberOfJSONObjectsFromAPI(numberOfObjectsReturnedFromAPI: Int) -> Void
     func requestManagerDidFinishTransformJSONtoPersonArray(personArray: [Person]) -> Void
 
 }
