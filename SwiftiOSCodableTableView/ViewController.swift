@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     let apiRequestManager = APIRequestManager.sharedInstance
-    var numberOfSpaceObjects = 0
+    var numberOfSpaceCraftObjects = 0
     var peopleArray: [Person] = []
     
     override func viewDidLoad() {
@@ -22,26 +22,23 @@ class ViewController: UIViewController {
 
 extension ViewController: APIRequestManagerDelegate {
     //MARK: -  Delegate Methods from APIRequestManager
-    func managerDidDecodeSpaceResponseFromAPI() {
-        if let spaceResponse = apiRequestManager.spaceResponse {
-            self.numberOfSpaceObjects = spaceResponse.number
+    func requestManagerDidCalculateNumberOfJSONObjectsFromAPI(numberOfObjectsReturnedFromAPI: Int) {
+        self.numberOfSpaceCraftObjects = numberOfObjectsReturnedFromAPI
+    }
+    
+    func requestManagerDidFinishTransformJSONtoPersonArray(personArray: [Person]) {
+        self.peopleArray = personArray
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
-    func managerDidReceivePersonObjectsFromAPI() {
-        if let peopleArray = apiRequestManager.peopleArray {
-            self.peopleArray = peopleArray
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
 }
 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfSpaceObjects
+        return numberOfSpaceCraftObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

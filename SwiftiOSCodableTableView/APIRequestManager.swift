@@ -14,8 +14,6 @@ class APIRequestManager {
     let api_url = URL(string: "http://api.open-notify.org/astros.json")!
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
-    var spaceResponse: SpaceCraftResponse?
-    var peopleArray: [Person]?
     var delegate: APIRequestManagerDelegate?
     
      init() {
@@ -27,11 +25,9 @@ class APIRequestManager {
             if let data = data {
                 print(data)
                 if let spaceResponse = self.parseJsonDataIntoDecodedResponse(data: data) {
-                    self.spaceResponse = spaceResponse
-                    self.delegate?.managerDidDecodeSpaceResponseFromAPI()
-                    if let peopleArray = spaceResponse.people {
-                        self.peopleArray = peopleArray
-                        self.delegate?.managerDidReceivePersonObjectsFromAPI()
+                    self.delegate?.requestManagerDidCalculateNumberOfJSONObjectsFromAPI(numberOfObjectsReturnedFromAPI: spaceResponse.number)
+                    if let personArray = spaceResponse.people {
+                        self.delegate?.requestManagerDidFinishTransformJSONtoPersonArray(personArray: personArray)
                     }
                 }
             }
@@ -52,7 +48,7 @@ class APIRequestManager {
 
 protocol APIRequestManagerDelegate {
     
-    func managerDidDecodeSpaceResponseFromAPI() -> Void
-    func managerDidReceivePersonObjectsFromAPI() -> Void
+    func requestManagerDidCalculateNumberOfJSONObjectsFromAPI(numberOfObjectsReturnedFromAPI: Int) -> Void
+    func requestManagerDidFinishTransformJSONtoPersonArray(personArray: [Person]) -> Void
 
 }
