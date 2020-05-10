@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, APIRequestManagerDelegate {
+class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     let apiRequestManager = APIRequestManager.sharedInstance
     var numberOfSpaceObjects = 0
@@ -18,8 +18,10 @@ class ViewController: UIViewController, APIRequestManagerDelegate {
         super.viewDidLoad()
         self.apiRequestManager.delegate = self
     }
-    
-    //MARK: - Custom Delegate Methods
+}
+
+extension ViewController: APIRequestManagerDelegate {
+    //MARK: -  Delegate Methods from APIRequestManager
     func managerDidDecodeSpaceResponseFromAPI() {
         if let spaceResponse = apiRequestManager.spaceResponse {
             self.numberOfSpaceObjects = spaceResponse.number
@@ -34,8 +36,8 @@ class ViewController: UIViewController, APIRequestManagerDelegate {
             }
         }
     }
-    
 }
+
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

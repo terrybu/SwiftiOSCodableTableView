@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:interviewtest.xcodeproj">
+      location = "self:/Users/tbu/Projects/interviewTestSwift/SwiftiOSCodableTableView.xcodeproj">
    </FileRef>
 </Workspace>

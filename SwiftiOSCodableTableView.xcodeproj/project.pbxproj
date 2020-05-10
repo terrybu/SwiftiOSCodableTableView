@@ -23,7 +23,7 @@
 		63A8B89E2467420200FFF567 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		63A8B8A124674A1300FFF567 /* SpaceCraftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCraftTableViewCell.swift; sourceTree = "<group>"; };
 		63AEE7512467024B00EAFB8B /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
-		63B96A012462267100A5CA69 /* interviewtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = interviewtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B96A012462267100A5CA69 /* SwiftiOSCodableTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOSCodableTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B96A042462267100A5CA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B96A062462267100A5CA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63B96A082462267100A5CA69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		63B969F82462267100A5CA69 = {
 			isa = PBXGroup;
 			children = (
-				63B96A032462267100A5CA69 /* interviewtest */,
+				63B96A032462267100A5CA69 /* SwiftiOSCodableTableView */,
 				63B96A022462267100A5CA69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,12 +73,12 @@
 		63B96A022462267100A5CA69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63B96A012462267100A5CA69 /* interviewtest.app */,
+				63B96A012462267100A5CA69 /* SwiftiOSCodableTableView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63B96A032462267100A5CA69 /* interviewtest */ = {
+		63B96A032462267100A5CA69 /* SwiftiOSCodableTableView */ = {
 			isa = PBXGroup;
 			children = (
 				63B96A042462267100A5CA69 /* AppDelegate.swift */,
@@ -92,15 +92,15 @@
 				63B96A0F2462267700A5CA69 /* LaunchScreen.storyboard */,
 				63B96A122462267700A5CA69 /* Info.plist */,
 			);
-			path = interviewtest;
+			path = SwiftiOSCodableTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63B96A002462267100A5CA69 /* interviewtest */ = {
+		63B96A002462267100A5CA69 /* SwiftiOSCodableTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63B96A152462267700A5CA69 /* Build configuration list for PBXNativeTarget "interviewtest" */;
+			buildConfigurationList = 63B96A152462267700A5CA69 /* Build configuration list for PBXNativeTarget "SwiftiOSCodableTableView" */;
 			buildPhases = (
 				63B969FD2462267100A5CA69 /* Sources */,
 				63B969FE2462267100A5CA69 /* Frameworks */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = interviewtest;
+			name = SwiftiOSCodableTableView;
 			productName = interviewtest;
-			productReference = 63B96A012462267100A5CA69 /* interviewtest.app */;
+			productReference = 63B96A012462267100A5CA69 /* SwiftiOSCodableTableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63B969FC2462267100A5CA69 /* Build configuration list for PBXProject "interviewtest" */;
+			buildConfigurationList = 63B969FC2462267100A5CA69 /* Build configuration list for PBXProject "SwiftiOSCodableTableView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63B96A002462267100A5CA69 /* interviewtest */,
+				63B96A002462267100A5CA69 /* SwiftiOSCodableTableView */,
 			);
 		};
 /* End PBXProject section */
@@ -318,13 +318,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UL34HQ54BX;
-				INFOPLIST_FILE = interviewtest/Info.plist;
+				INFOPLIST_FILE = SwiftiOSCodableTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = terrybu.interviewtest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = terrybu.SwiftiOSCodableTableView;
+				PRODUCT_NAME = SwiftiOSCodableTableView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,13 +336,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UL34HQ54BX;
-				INFOPLIST_FILE = interviewtest/Info.plist;
+				INFOPLIST_FILE = SwiftiOSCodableTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = terrybu.interviewtest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = terrybu.SwiftiOSCodableTableView;
+				PRODUCT_NAME = SwiftiOSCodableTableView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63B969FC2462267100A5CA69 /* Build configuration list for PBXProject "interviewtest" */ = {
+		63B969FC2462267100A5CA69 /* Build configuration list for PBXProject "SwiftiOSCodableTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63B96A132462267700A5CA69 /* Debug */,
@@ -360,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63B96A152462267700A5CA69 /* Build configuration list for PBXNativeTarget "interviewtest" */ = {
+		63B96A152462267700A5CA69 /* Build configuration list for PBXNativeTarget "SwiftiOSCodableTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63B96A162462267700A5CA69 /* Debug */,
